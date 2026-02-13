@@ -3,7 +3,7 @@ package com.mycompany.agency;
 
     // TODO 1: Make StaffEmployee a child of StaffMember
 
-public class StaffEmployee 
+public class StaffEmployee extends StaffMember
 {
     protected String socialSecurityNumber;
     protected double payRate;
@@ -19,6 +19,8 @@ public class StaffEmployee
 
         socialSecurityNumber = socSecNumber;
         payRate = rate;
+
+        // remove "e" from the variables to get the super class's instance of them
     }
 
     //-----------------------------------------------------------------
@@ -27,7 +29,10 @@ public class StaffEmployee
     //-----------------------------------------------------------------
     public String toString()
     {
-    
+        return "Name: " + StaffEmployee.this.name +
+                "\nAddress: " + StaffEmployee.this.address +
+                "\nPhone: " + StaffEmployee.this.phone +
+                "\nSocial Security Number: " + StaffEmployee.this.socialSecurityNumber;
     }
 
     //-----------------------------------------------------------------
@@ -35,6 +40,6 @@ public class StaffEmployee
     //-----------------------------------------------------------------
     public double pay()
     {
-       
+       return StaffEmployee.this.payRate;
     }
 }
