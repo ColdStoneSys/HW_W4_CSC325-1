@@ -2,9 +2,11 @@ package com.mycompany.agency;
 
 
 
-    // TODO 1: Make Intern a child of StaffEmploee
+// TODO 1: Make Intern a child of StaffEmployee
+// THIS ITEM INCORRECTLY ASKS TO EXTEND STAFF_EMPLOYEE, BUT THE UML SAYS TO EXTEND STAFF_MEMBER
 
-public class Intern 
+
+public class Intern extends StaffMember
 {
     //-----------------------------------------------------------------
     //  TODO 2: Constructor: Sets up this intern using the specified
@@ -12,7 +14,7 @@ public class Intern
     //-----------------------------------------------------------------
     public Intern(String eName, String eAddress, String ePhone)
     {
-        
+        super(eName, eAddress, ePhone);
     }
 
     //-----------------------------------------------------------------
@@ -20,6 +22,6 @@ public class Intern
     //-----------------------------------------------------------------
     public double pay()
     {
-      
+        return 0;
     }
 }
